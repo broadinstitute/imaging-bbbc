@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}    
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 1</p>
+
+<h3>Example image</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+    <img src="CPvalid1_nodsRNA_40x_Tiles_p0003DAPI.jpg" width="186" height="186" alt="example image">
+    </div>
+  </li>
+</ul>
+    
+    <h3>Biological application</h3>
+    <p>Five different samples of <i>Drosophila melanogaster</i> Kc167
+    cells were stained with Hoechst 33342, a DNA stain.  The last
+    sample (labeled <i>nodsRNA</i>) is of wild-type cells.  Each of
+    the other four samples
+    (labeled <i>48</i>, <i>340</i>, <i>Anillin</i>, and <i>mad2</i>)
+    has a different gene knocked down by RNAi.  The sample
+    preparation is described in more detail
+    by <a href="http://dx.doi.org/10.1186/gb-2006-7-10-r100">Carpenter
+    et al. (<i>Genome Biology</i>, 2006)</a>.</p>
+
+    <h3>Images</h3>
+    <p>There are 10 fields of view of each sample, for a total of 50
+    fields of view.  The images were acquired on a Zeiss Axiovert 200M
+    microscope. The images provided here are a single channel,
+    DNA. The image size is 512 x 512 pixels. The images are provided
+    as 8-bit TIFF files.</p>
+
+    <p><a href="{{acc}}_v1_images.zip"><i class="icon-download-alt"></i> {{acc}}_v1_images.zip (3.4 MB)</a></p>
+    
+    <h3>Ground truth {{C}}</h3>
+
+    <p>A tab-delimited text file contains the number of cells in each
+    image, as determined by two different human counters.  To compare
+    an algorithm's results to these, first compute for each sample the
+    algorithm's mean cell count over the 10 images of the sample.
+    Next, calculate the absolute difference between this mean and the
+    average of the humans' counts for the sample, then divide by the
+    latter to obtain the deviation from ground truth (in percent).
+    The mean of these values over all 5 samples is the final
+    result.</p>
+
+    <p>Note: The two human observers vary by 16% for this image set.</p>
+
+    <p><a href="{{acc}}_v1_counts.txt"><i class="icon-download-alt"></i> {{acc}}_v1_counts.txt</a></p>
+    
+    <h3>Published results using this image set</h3>
+    <table class="table">
+      <thead>
+	<tr><th>{{C}}</th><th>Citation</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+	<td>17%</td>
+	<td><a href="http://dx.doi.org/10.1186/gb-2006-7-10-r100">Carpenter
+	et al., <i>Genome Biology</i>, 2006.</a>  See Figure 2A, pages
+	6-7.</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h3>Acknowledgements</h3>
+    <p>We would like to thank Robert Lindquist and JooHan Chang for
+    counting the cells.</p>
+    
+    <h3>Recommended citation</h3>
+    <p>"We used the image set <a href="">{{acc}}v1</a>
+	[<a href="http://genomebiology.com/2006/7/10/R100">Carpenter
+	et al., <i>Genome Biology</i>, 2006</a>] from the Broad
+    Bioimage Benchmark Collection [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>]."</p>
+
+    <h3>Copyright</h3>
+    <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  To the extent possible under law,
+  <a rel="dct:publisher"
+     href="http://www.broadinstitute.org/~anne/">
+    <span property="dct:title">Anne Carpenter</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property="dct:title">Drosophila Kc167 images and ground truth</span>.
+This work is published from:
+<span property="vcard:Country" datatype="dct:ISO3166"
+      content="US" about="http://www.broadinstitute.org/~anne/">
+  United States</span>.
+</p>
+
+{% endblock %}

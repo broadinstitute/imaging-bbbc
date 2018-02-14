@@ -1,0 +1,1 @@
+../../high_throughput_images/BBBC013/BBBC013_v1_platemap_all.txt

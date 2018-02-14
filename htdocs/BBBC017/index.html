@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>BBBC017: Human HT29 colon-cancer cells shRNAi screen</title>
+    <link href="../bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="../bbbc_stylesheet.css" type="text/css" rel="stylesheet"/>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="page-header">
+	<div class="pull-right">
+	  <a href="http://www.broadinstitute.org/imaging/"><img alt="Broad Institute" src="../linked_files/broad-logo.gif" width="200" height="50"></a>
+	</div>
+
+	<h1>Broad Bioimage Benchmark Collection</h1>
+	<p class="lead">Annotated biological image sets for testing and validation</p>
+      </header>
+      
+      <div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+	  
+	  <li><a href="../index.html">Introduction</a></li>
+	  
+	  <li class="active"><a href="../image_sets.html">Image sets</a></li>
+	  
+	  <li><a href="../benchmarking.html">Benchmarking</a></li>
+	  
+	  <li><a href="../contribute.html">Contribute</a></li>
+	  
+	  <li class="divider"></li>
+	  <li class="nav-header">Legend: Kinds of ground truth</li>
+	  <li class="legend">
+	    <dl class="dl-horizontal">
+	      <dt><a href="../benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></dt>
+	      <dd>Counts</dd>
+	      <dt><a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></dt>
+	      <dd>Foreground/background</dd>
+	      <dt><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></dt>
+	      <dd>Outlines of objects</dd>
+	      <dt><a href="../benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></dt>
+	      <dd>Biological labels</dd>
+	    </dl>
+	  </li>
+	</ul>
+
+	<div class="tab-content">	
+	  
+	  <h2>Human HT29 colon-cancer cells shRNAi screen</h2>
+	  
+	  
+<p class="small">Accession number <a href="">BBBC017</a> &middot; Version 1</p>
+
+<h3>Example image</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="AS_09125_050118150001_A03f00d0thumb.jpg" width="186" height="186">
+      <div class="caption">
+      </div>
+    </div>
+  </li>
+</ul>
+
+    <h3>Biological application</h3>
+
+    <p>These images are of human HT29 colon cancer cells, a cell line
+      that has been widely used for the study of many normal and
+      neoplastic processes.  <a
+      href="http://dx.doi.org/10.1016/j.cell.2006.01.040">Moffat et
+      al. (Cell, 2006)</a> used the HT29 cell line to screen 4,903
+      shRNAi constructs (targeting 1,028 human genes) in order to find
+      mitotic regulators.</p>
+
+
+    <h3>Experiment</h3>
+
+    <p>The experiment consists of 10,752 samples, laid out on 28
+    384-well plates. The samples were stained with Hoechst 33342, pH3,
+    and phalloidin.  Hoechst 33342 is a DNA stain that labels the
+    nucleus. Phospho-histone H3 indicates mitosis. Phalloidin labels
+    actin, which is present in the cytoplasm.</p>
+
+    <p>Puromycin In addition to delivering the hairpin, the lentivirus
+    makes the cells resistant to the antibiotic puromycin. Thus, one can
+    measure the fraction of cells infected by infecting two wells with
+    lentiviruses for the same hairpin, treat only one of the wells
+    with puromycin, and count the number of surviving cells in each of
+    the two wells. The infection is considered successful if at least
+    25 percent of the cells are resistant to puromycin. The screen was
+    done in duplicate, and one replicate (14 plates) was treated with
+    puromycin.</p>
+
+    <h3>Images</h3>
+
+    <p>Six fields of view were imaged for each sample, for a total of
+    64,512 fields of view. Because there are three channels, there are
+    193,536 image files. The files are in DIB format, as produced by
+    the Cellomics ArrayScan instrument at the Whitehead–MIT Bioimaging
+    Center. We recommend using <a
+    href="http://loci.wisc.edu/software/bio-formats">Bio-Formats</a>
+    to read the DIB files. Each image is 512 x 512 pixels.</p>
+
+    <p>The filenames are of the form</p>
+    <blockquote><samp>NIRHTa+002/AS_09125_050117080001_A01f00d0.DIB</samp>,</blockquote>
+    <p>where “<samp>+</samp>” identifies the plate as a puromycin-treated
+    replicate (could be “<samp>-</samp>”), “<samp>002</samp>” identifies the
+    plate (could be “<samp>001</samp>” through “<samp>014</samp>”),
+    “<samp>050117080001</samp>” is another identifier for the plate (and
+    therefore the same for all images from the plate), “<samp>A01</samp>”
+    identifies the well (can be “<samp>A01</samp>” through
+    “<samp>P24</samp>”), “<samp>f00</samp>” identifies the field (can be
+    “<samp>f00</samp>” through “<samp>f05</samp>”), and “<samp>d0</samp>”
+    identifies the channel (can be “<samp>d0</samp>” for DNA,
+    “<samp>d1</samp>” for pH3, or “<samp>d2</samp>” for actin).</p>
+
+    <p>We provide the image files as 28 ZIP files, one per plate. Each
+    ZIP file is roughly 2 GB, and contains 6912 DIB files.</p>
+
+    <p><a href="BBBC017_v1_images_NIRHTa-001.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-001.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-002.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-002.zip (2.0 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-003.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-003.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-004.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-004.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-005.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-005.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-006.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-006.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-007.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-007.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-008.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-008.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-009.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-009.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-010.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-010.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-011.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-011.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-012.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-012.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-013.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-013.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa-014.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa-014.zip (2.0 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+001.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+001.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+002.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+002.zip (1.7 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+003.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+003.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+004.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+004.zip (1.9 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+005.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+005.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+006.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+006.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+007.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+007.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+008.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+008.zip (1.7 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+009.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+009.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+010.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+010.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+011.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+011.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+012.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+012.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+013.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+013.zip (1.8 GB)</a></p>
+    <p><a href="BBBC017_v1_images_NIRHTa+014.zip"><i class="icon-download-alt"></i> BBBC017_v1_images_NIRHTa+014.zip (1.8 GB)</a></p>
+
+    <h3>Metadata</h3>
+
+    <p>The metadata for the experiment (including the shRNAi constructs
+    applied to each well and their targets) are supplied as a
+    Microsoft Excel spreadsheet. The columns “<samp>384-Plate#</samp>”
+    and “<samp>384-well</samp>” map to the numbers and well positions
+    in the image filenames, with the exception that plate number 15 in
+    the spreadsheet maps to plate number 14 in the filenames.</p>
+
+    <p>The plate identified as 384-Plate# 14 in the spreadsheet was
+    planned to be in th experiment, but was not included for technical
+    reasons. The remaining 5376 rows of data correspond to the 5367
+    samples in each replicate experiment (the puromycin-treated
+    replicate and the untreated replicate).</p>
+
+    <p><a href="BBBC017_v1_metadata.xls"><i class="icon-download-alt"></i> BBBC017_v1_metadata.xls</a></p>
+
+
+    <h3>Recommended citation</h3>
+  <p>"We used image set <a href="">BBBC017v1</a> available from the
+    Broad Bioimage Benchmark Collection [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>]."</p>
+    
+    <h3>Copyright</h3>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />The BBBC017 images and ground truth are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a> by <a href="mailto:droot@broadinstitute.org">David Root</a> and <a href="http://www.broadinstitute.org/~anne/">Anne Carpenter</a>.
+
+	</div>
+
+      </div>
+	<footer class="footer">
+	
+        <p>This page last updated 2018-01-31</p>
+        
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	      ga('create', 'UA-44869085-1', 'broadinstitute.org');
+	        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

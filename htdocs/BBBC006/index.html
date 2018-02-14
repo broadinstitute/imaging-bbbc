@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>BBBC006: Human U2OS cells (out of focus)</title>
+    <link href="../bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="../bbbc_stylesheet.css" type="text/css" rel="stylesheet"/>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="page-header">
+	<div class="pull-right">
+	  <a href="http://www.broadinstitute.org/imaging/"><img alt="Broad Institute" src="../linked_files/broad-logo.gif" width="200" height="50"></a>
+	</div>
+
+	<h1>Broad Bioimage Benchmark Collection</h1>
+	<p class="lead">Annotated biological image sets for testing and validation</p>
+      </header>
+      
+      <div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+	  
+	  <li><a href="../index.html">Introduction</a></li>
+	  
+	  <li class="active"><a href="../image_sets.html">Image sets</a></li>
+	  
+	  <li><a href="../benchmarking.html">Benchmarking</a></li>
+	  
+	  <li><a href="../contribute.html">Contribute</a></li>
+	  
+	  <li class="divider"></li>
+	  <li class="nav-header">Legend: Kinds of ground truth</li>
+	  <li class="legend">
+	    <dl class="dl-horizontal">
+	      <dt><a href="../benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></dt>
+	      <dd>Counts</dd>
+	      <dt><a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></dt>
+	      <dd>Foreground/background</dd>
+	      <dt><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></dt>
+	      <dd>Outlines of objects</dd>
+	      <dt><a href="../benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></dt>
+	      <dd>Biological labels</dd>
+	    </dl>
+	  </li>
+	</ul>
+
+	<div class="tab-content">	
+	  
+	  <h2>Human U2OS cells (out of focus)</h2>
+	  
+	  
+
+<p class="small">Accession number <a href="">BBBC006</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="u2os_in_focus_image.png" alt="Ground truth: in focus" height="195" width="261">
+      <div class="caption">
+	Ground truth: in focus
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="u2os_out_of_focus_image.png" alt="Out of focus" height="195" width="261">
+      <div class="caption">
+	Out of focus
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="u2os_ground_truth_image.png" alt="Ground truth: foreground" height="195" width="261">
+      <div class="caption">
+	Ground truth: foreground
+      </div>
+    </div>
+  </li>
+</ul>
+	
+	<h3>Biological application</h3>
+	<p>Since robust foreground/background separation
+	and segmentation of cellular objects (i.e., identification of which pixels below to which objects) strongly 
+	depends on image quality, focus artifacts are detrimental to data quality. This image set provides examples 
+	of in- and out-of-focus HCS images which can be used for validation of focus metrics.</p>
+	<h3>Images</h3>
+	<p>Images were acquired from one 384-well microplate containing U2OS cells stained with Hoechst 33342 
+	markers (to label nuclei) were imaged with an exposure of 15 and 1000 ms for Hoechst and phalloidin 
+	respectively, at 20x magnification, 2x binning, and 2 sites per well. For each site, the optimal focus was found 
+	using laser auto-focusing to find the well bottom. The automated microscope was then programmed to collect a 
+	z-stack of 32 image sets (z = 16 at the optimal focal plane, 15 images above the focal plane, 16 below) with 
+	2 &mu;m between slices. Each image is 696 x 520 pixels in 16-bit TIF format, LZW compression. Each image filename
+	includes either 'w1' to denote Hoechst images or 'w2' to denote phalloidin images.</p>
+
+<p><a href="BBBC006_v1_images_z_00.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_00.zip (798 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_01.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_01.zip (801 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_02.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_02.zip (803 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_03.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_03.zip (804 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_04.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_04.zip (806 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_05.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_05.zip (807 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_06.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_06.zip (809 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_07.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_07.zip (809 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_08.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_08.zip (810 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_09.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_09.zip (810 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_10.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_10.zip (809 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_11.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_11.zip (809 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_12.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_12.zip (808 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_13.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_13.zip (806 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_14.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_14.zip (805 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_15.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_15.zip (803 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_16.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_16.zip (800 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_17.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_17.zip (798 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_18.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_18.zip (795 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_19.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_19.zip (793 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_20.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_20.zip (791 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_21.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_21.zip (791 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_22.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_22.zip (791 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_23.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_23.zip (793 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_24.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_24.zip (795 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_25.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_25.zip (797 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_26.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_26.zip (799 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_27.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_27.zip (801 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_28.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_28.zip (803 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_29.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_29.zip (804 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_30.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_30.zip (805 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_31.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_31.zip (805 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_32.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_32.zip (806 MB)</a></p>
+<p><a href="BBBC006_v1_images_z_33.zip"><i class="icon-download-alt"></i> BBBC006_v1_images_z_33.zip (806 MB)</a></p>
+	
+        <h3>Ground truth <a href="../benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></h3>
+        <p>For each of the 768 fields of view (384 wells, 2 fields of view per well), an automated algorithm used the image at optimal focus (z = 16) to identify and count the nuclei. The counts are provided as a CSV file:
+
+<p><a href="BBBC006_v1_counts.csv"><i class="icon-download-alt"></i> BBBC006_v1_counts.zip (66 kB)</a></p>
+
+        <p>Example rows from the file:</p>
+
+<table class="table small table-condensed" style="overflow: auto;">
+<thead>
+<tr>
+<th>Image_Count_Nuclei</th>
+<th>Image_FileName_OrigDAPI</th>
+<th>Image_Metadata_Site</th>
+<th>Image_Metadata_Well</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>mcf-z-stacks-03212011_a01_s1_w197083f74-b742-4ab9-ae46-d58ae8bfa7b6.tif</td><td>1</td><td>a01</td></tr>
+<tr><td>0</td><td>mcf-z-stacks-03212011_a01_s2_w1a63ef720-8648-425b-a84d-dcf2f6bb0044.tif</td><td>2</td><td>a01</td></tr>
+<tr><td>68</td><td>mcf-z-stacks-03212011_a02_s1_w1ebe36734-a690-47f3-a2f9-83b58c8b620f.tif</td><td>1</td><td>a02</td></tr>
+<tr><td>80</td><td>mcf-z-stacks-03212011_a02_s2_w1376ffd1a-e96b-43ca-9d96-fd2a282c9573.tif</td><td>2</td><td>a02</td></tr>
+</tbody>
+</table>
+  
+	<h3>Ground truth <a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a> <a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></h3>
+	<p>The images were manually examined by an expert to classify which focal planes corresponded to in- and out-fous images.
+	Planes between z = 11 - 23 are considered ground truth as in-focus images.
+	</p>
+	<p>For in-focus images, the pixels belonging to the nuclei were automatically identified as 
+	foreground and segmented. These ground truth images are 8-bit grayscale PNG files, with each segmented nuclei
+	receiving a unique integer label. If the segmentation is not needed, the foreground can be thresholded with all pixel values
+	greater than 0.</p>
+
+<p><a href="BBBC006_v1_labels.zip"><i class="icon-download-alt"></i> BBBC006_v1_labels.zip (9.8 MB)</a></p>
+
+	
+	<h3>Acknowledgement</h3>
+	<p>The cells were cultured by Sigrun Gustafsdottir and the images were acquired by Tom Hasaka.
+	Mark Bray identified the foreground.</p>
+
+<h3>Published results using this image set</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nucleus counts (32 z-step increments, with 2304 fields of view each)</th>
+      <th>Citation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+	<a href="BBBC006_results_bray.csv"><i class="icon-download-alt"></i> BBBC006_results_bray.csv (2.4 MB)</a>
+      </td>
+      <td><a href="http://dx.doi.org/10.1177/1087057111420292">Bray et
+	  al., <i>J.  Biomol Screen</i>, 2011</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Recommended citation</h3>
+<p>"We used the image set <a href="">BBBC006v1</a> from the Broad
+  Bioimage Benchmark Collection
+  [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>]."</p>
+
+	<h3>Copyright</h3> 
+	<p>
+	<a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">
+	<img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" /></a> 
+	To the extent possible under law, <a href="http://www.broadinstitute.org/~anne/" rel="dct:publisher"> 
+	<span property="dct:title">Anne Carpenter</span></a> 
+	has waived all copyright and related or neighboring rights to 
+	<span property="dct:title">out-of-focus U2OS images and ground truth</span>. This work is published from:
+	<span datatype="dct:ISO3166" content="US" about="http://www.broadinstitute.org/~anne/" property="vcard:Country"> 
+	United States</span>.
+	</p>    
+	
+
+	</div>
+
+      </div>
+	<footer class="footer">
+	
+        <p>This page last updated 2018-01-31</p>
+        
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	      ga('create', 'UA-44869085-1', 'broadinstitute.org');
+	        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

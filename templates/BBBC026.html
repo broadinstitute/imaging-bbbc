@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 1</p>
+
+<!-- ADD EXMAPLE IMAGES LATER <h3>Example images</h3>
+
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="CNT_Vitra_neg.jpg" width="181" height="174" alt="Positive">
+      <div class="caption">
+	Positive
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="CNT_Vitra_pos.jpg" width="181" height="174"  alt="Negative">
+      <div class="caption">
+	Negative
+      </div>
+    </div>
+  </li>
+</ul> -->
+
+
+	  <h3>Biological application</h3>
+	  <p>This 384-well plate has images of co-cultured hepatocytes and fibroblasts.
+    Every other well is populated (A01, A03, ..., C01, C03, ...) such that 96 wells
+    comprise the data.  Each well has 9 sites and thus 9 images associated, totaling 864 images.</p>
+
+	  <h2>Images</h2>
+	  <p>For each well there is one field and a single image nuclear image (Hoecsht).
+    Images are in 8-bit PNG format. </p>
+
+    <p><a href="{{acc}}_v1_images.zip"><i class="icon-download-alt"></i> {{acc}}_v1_images.zip (402 MB)</a></p>
+
+
+    <h2>Executables</h2>
+    <p><a href="CellProfiler_2.1.2_win64_r20150805143441.exe"> CellProfiler version 2015_08_05 (Windows, 64-bit, git hash aa38cd9)</a> </p>
+    <p><a href="CellProfilerAnalyst_win32_r20140401184343.exe"> CellProfiler Analyst version 2014_04_01 (Windows, 64-bit)</a> </p>
+    <p><a href="ilastik-0.5-win-v0.5.12-x86-64.exe"> ilastik version 0.5.12 (Windows, 64-bit)</a> </p>
+		<p><a href="CellProfiler_2.1.2_win64_r20151120164007.exe"> CellProfiler version 2015_11_20 - Used for Ground Truth pipelines (Windows, 64-bit) (Needed to fix a bug in FilterObjects)</a> </p>
+
+    <h2>CellProfiler pipelines</h2>
+	  <p><a href="CP_CPA_only.cppipe"> CellProfiler pipeline before Cellprofiler Analyst</a> ('Previous Workflow')</p>
+    <p><a href="ilastik_CP_pipeline.cppipe"> CellProfiler pipeline after ilastik</a> ('New Workflow')</p>
+		<p><a href="Count_Ground_Truth_Compare_CPA.cppipe"> CellProfiler pipeline to compare ground truth to CP+CPA pipeline</a></p>
+		<p><a href="Count_Ground_Truth_Compare_Ilastik.cppipe"> CellProfiler pipeline to compare ground truth to ilastik+CP pipeline</a></p>
+
+    <h2>ilastik Project</h2>
+    <p><a href="ilastik_Project_Seeding_2015_08_28.ilp"> ilastik Project file </a> </p>
+
+	  <h2>Ground truth {{B}} {{C}}</h2>
+    <p>The images in column '01' have 4000 hepatocytes per well. These can be considered
+      as 'negative' controls. The wells are specified in the filename.</p>
+    <p>The images in column '23' have 9500 hepatocytes per well. These can be considered
+      as 'positive' controls. The wells are specified in the filename.</p>
+
+      <h3> Hand-annotated Ground Truth Images</h3>
+      <p> As described in section 2.4 of the paper noted below (Logan), 5 images were manually annotated with cell type. For each nucleus a colored seed point is given. Red seeds denote hepatocyte cells, green seeds denote fibroblast cells, and blue seeds denote other cell types.</p>
+      <p>These images are used in the CellProfiler pipelines comparing the performance of the two different workflows.</p>
+      <p><a href="{{acc}}_GT_images.zip"><i class="icon-download-alt"></i> {{acc}}_GT_images.zip (4.6 MB)</a></p>
+
+    <h2>To replicate Figure 4 (in the article below)</h2>
+    <p>Run these Matlab scripts</p>
+    <p><a href="run_all_calcZ.m"> Run this script, which wraps the second. </a> </p>
+    <p><a href="CalcZ.m"> Second script </a> </p>
+    Further instructions on how to configure are in the comments.
+
+	  <h2>Published results using this image set</h2>
+    <p>Logan DJ, Shan J, Bhatia SN, Carpenter AE (2015). Quantifying co-cultured cell
+      phenotypes in high-throughput using pixel-based classification. Methods pii:
+			S1046-2023(15)30170-5 / <a href="http://dx.doi.org/10.1016/j.ymeth.2015.12.002">doi</a>.
+		 PMID: 26687239. PMCID: PMC4766037. (Research article)
+    <h3>Copyright</h3>
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">
+      The {{acc}}v1 image set
+  </span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> by <a href="mailto:anne@broadinstitute.org">Anne Carpenter</a> and <a href="mailto:David.Logan@pfizer.com">David Logan</a>.
+
+{% endblock %}

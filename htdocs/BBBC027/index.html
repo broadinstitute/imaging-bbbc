@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>BBBC027: 3D Colon Tissue (synthetic data)</title>
+    <link href="../bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="../bbbc_stylesheet.css" type="text/css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="page-header">
+	<div class="pull-right">
+	  <a href="http://www.broadinstitute.org/imaging/"><img alt="Broad Institute" src="../linked_files/broad-logo.gif" width="200" height="50"></a>
+	</div>
+
+	<h1>Broad Bioimage Benchmark Collection</h1>
+	<p class="lead">Annotated biological image sets for testing and validation</p>
+      </header>
+
+      <div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
+
+    <li><a href="../index.html">Introduction</a></li>
+
+    <li class="active"><a href="../image_sets.html">Image sets</a></li>
+
+    <li><a href="../benchmarking.html">Benchmarking</a></li>
+
+    <li><a href="../contribute.html">Contribute</a></li>
+
+    <li class="divider"></li>
+    <li class="nav-header">Legend: Kinds of ground truth</li>
+    <li class="legend">
+      <dl class="dl-horizontal">
+        <dt><a href="../benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></dt>
+        <dd>Counts</dd>
+        <dt><a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></dt>
+        <dd>Foreground/background</dd>
+        <dt><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></dt>
+        <dd>Outlines of objects</dd>
+        <dt><a href="../benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></dt>
+        <dd>Biological labels</dd>
+      </dl>
+    </li>
+  </ul>
+
+
+  	<div class="tab-content">
+
+  	  <h2>3D Colon Tissue (synthetic data)</h2>
+
+<p class="small">Accession number <a href="">BBBC027</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="image-colon-sample.png" alt="In focus" height="195" width="261">
+      <div class="caption">
+	3D image
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="foreground-colon-sample.png" alt="Out of focus" height="195" width="261">
+      <div class="caption">
+    3D foreground
+  </div>
+</div>
+</li>
+</ul>
+
+<h3>Biological application</h3>
+<p>One of the principal challenges in counting or segmenting nuclei is dealing with clustered nuclei. To help assess algorithms' performance in this regard, this synthetic image set is provided in two diferent levels of quality: high SNR and low SNR.</p>
+
+<h3>Images</h3>
+<p>A set (both in high and low SNR variant) of 30 images is provided. Each image contains the collection
+   of nuclei formed in clusters. The dataset was generated using the virtual microscope imitating the microscope
+    Zeiss S100 (objective Zeiss 63x/1.40 Oil DIC) attached to confocal unit Atto CARV and CCD camera Micromax
+     1300-YHS.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>SNR</th>
+      <th>download images</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>low</td>
+      <td><a href="BBBC027_lowSNR_images_part1.zip">BBBC027_lowSNR_images_part1.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>low</td>
+      <td><a href="BBBC027_lowSNR_images_part2.zip">BBBC027_lowSNR_images_part2.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>low</td>
+      <td><a href="BBBC027_lowSNR_images_part3.zip">BBBC027_lowSNR_images_part3.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>high</td>
+      <td><a href="BBBC027_highSNR_images_part1.zip">BBBC027_highSNR_images_part1.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>high</td>
+      <td><a href="BBBC027_highSNR_images_part2.zip">BBBC027_highSNR_images_part2.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>high</td>
+      <td><a href="BBBC027_highSNR_images_part3.zip">BBBC027_highSNR_images_part3.zip</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Ground truth (C) (F)</h3>
+<p>Each image contains binary mask of all the cells located inside the ROI; this is the ground truth for counting. Ground truth for foreground/background segmentation are available as binary images:
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>SNR</th>
+      <th>download foreground</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>low</td>
+      <td><a href="BBBC027_lowSNR_foreground_part1.zip">BBBC027_lowSNR_foreground_part1.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>low</td>
+      <td><a href="BBBC027_lowSNR_foreground_part2.zip">BBBC027_lowSNR_foreground_part2.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>low</td>
+      <td><a href="BBBC027_lowSNR_foreground_part3.zip">BBBC027_lowSNR_foreground_part3.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>high</td>
+      <td><a href="BBBC027_highSNR_foreground_part1.zip">BBBC027_highSNR_foreground_part1.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>high</td>
+      <td><a href="BBBC027_highSNR_foreground_part2.zip">BBBC027_highSNR_foreground_part2.zip</a></td>
+    </tr>
+    <tr>
+
+      <td>high</td>
+      <td><a href="BBBC027_highSNR_foreground_part3.zip">BBBC027_highSNR_foreground_part3.zip</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Recommended citation</h3>
+<p>"We used image set BBBC027 [Svoboda David, Homola Ondřej, Stejskal Stanislav. Generation of 3D Digital Phantoms of Colon Tissue, In International Conference on Image Analysis and Recognition - ICIAR 2011, Part II, LNCS 6754, Berlin, Heidelberg: Springer-Verlag, pp 31-39, June 2011] from the Broad Bioimage Benchmark Collection."</p>
+
+  <h3>Copyright</h3>
+  <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+  The images and ground truth are licensed under a
+  <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>
+  by <a href="mailto:svoboda@fi.muni.cz">David Svoboda</a>.
+
+
+  <footer class="footer">
+
+        <p>This page last updated 2015-10-06</p>
+
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>

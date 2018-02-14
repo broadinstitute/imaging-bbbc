@@ -1,0 +1,1 @@
+../../high_throughput_images/BBBC014/BBBC014_v1_platemap_half.txt

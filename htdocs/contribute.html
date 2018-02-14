@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Contribute to the BBBC</title>
+    <link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="bbbc_stylesheet.css" type="text/css" rel="stylesheet"/>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="page-header">
+	<div class="pull-right">
+	  <a href="http://www.broadinstitute.org/imaging/"><img alt="Broad Institute" src="linked_files/broad-logo.gif" width="200" height="50"></a>
+	</div>
+
+	<h1>Broad Bioimage Benchmark Collection</h1>
+	<p class="lead">Annotated biological image sets for testing and validation</p>
+      </header>
+      
+      <div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+	  
+	  <li><a href="index.html">Introduction</a></li>
+	  
+	  <li><a href="image_sets.html">Image sets</a></li>
+	  
+	  <li><a href="benchmarking.html">Benchmarking</a></li>
+	  
+	  <li class="active"><a href="contribute.html">Contribute</a></li>
+	  
+	  <li class="divider"></li>
+	  <li class="nav-header">Legend: Kinds of ground truth</li>
+	  <li class="legend">
+	    <dl class="dl-horizontal">
+	      <dt><a href="benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></dt>
+	      <dd>Counts</dd>
+	      <dt><a href="benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></dt>
+	      <dd>Foreground/background</dd>
+	      <dt><a href="benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></dt>
+	      <dd>Outlines of objects</dd>
+	      <dt><a href="benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></dt>
+	      <dd>Biological labels</dd>
+	    </dl>
+	  </li>
+	</ul>
+
+	<div class="tab-content">	
+	  
+	  <h2>Contribute to the BBBC</h2>
+	  
+	  
+
+We welcome contributions of the following:
+<ul>
+  <li>Image sets with descriptions and ground truth</li>
+  <li>High-throughput image sets</li>
+  <li>Published benchmarking results of algorithms applied to the BBBC image sets</li>
+  <li>Corrections to existing descriptions or ground truth</li>
+  <li>Feedback on the <a href="benchmarking.html">benchmarking methodology</a> or other aspects of the BBBC</li>
+</ul>
+
+The best way to reach us is by email: <a href="mailto:imagingadmin@broadinstitute.org">imagingadmin@broadinstitute.org</a>.
+
+
+<h3>Contributing image sets</h3>
+
+<p>If you are considering contributing an image set and associated
+ground truth to the BBBC, the best first step is to make a draft of
+the description of the image set and its ground truth, using one of the
+existing image sets as a template.  Send us the draft description, as
+well as an example image. Together, we will discuss whether the BBBC
+is the best home for your image set. We will also offer feedback on
+the description and the best formats for providing the images and
+ground truth.</li>
+
+
+	</div>
+
+      </div>
+	<footer class="footer">
+	
+        <p>This page last updated 2018-01-31</p>
+        
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	      ga('create', 'UA-44869085-1', 'broadinstitute.org');
+	        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

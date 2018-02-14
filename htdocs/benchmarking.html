@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Benchmarking methodology</title>
+    <link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="bbbc_stylesheet.css" type="text/css" rel="stylesheet"/>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="page-header">
+	<div class="pull-right">
+	  <a href="http://www.broadinstitute.org/imaging/"><img alt="Broad Institute" src="linked_files/broad-logo.gif" width="200" height="50"></a>
+	</div>
+
+	<h1>Broad Bioimage Benchmark Collection</h1>
+	<p class="lead">Annotated biological image sets for testing and validation</p>
+      </header>
+      
+      <div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+	  
+	  <li><a href="index.html">Introduction</a></li>
+	  
+	  <li><a href="image_sets.html">Image sets</a></li>
+	  
+	  <li class="active"><a href="benchmarking.html">Benchmarking</a></li>
+	  
+	  <li><a href="contribute.html">Contribute</a></li>
+	  
+	  <li class="divider"></li>
+	  <li class="nav-header">Legend: Kinds of ground truth</li>
+	  <li class="legend">
+	    <dl class="dl-horizontal">
+	      <dt><a href="benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></dt>
+	      <dd>Counts</dd>
+	      <dt><a href="benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></dt>
+	      <dd>Foreground/background</dd>
+	      <dt><a href="benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></dt>
+	      <dd>Outlines of objects</dd>
+	      <dt><a href="benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></dt>
+	      <dd>Biological labels</dd>
+	    </dl>
+	  </li>
+	</ul>
+
+	<div class="tab-content">	
+	  
+	  <h2>Benchmarking methodology</h2>
+	  
+	  
+
+    <p>To reasonably compare, or <i>benchmark</i>, algorithms
+      for image analysis, researchers must agree on a common
+      reference point&mdash;the image set's "correct"
+      answer&mdash;and see how closely each algorithm matches
+      it.  We adopt the common
+      term <a href="http://en.wikipedia.org/wiki/Ground_truth"><i>ground
+	  truth</i></a> for this reference point even though it may
+      be questionable in some cases whether the reference value
+      is the exact "truth."</p>
+
+    <p>This page discusses the four types of ground truth
+      available in the BBBC, as well as suitable benchmarking
+      methods for each type.  In some cases, there
+      are <a href="http://www.cellprofiler.org">CellProfiler</a>
+      analysis pipelines available to help with
+      benchmarking.</p>
+
+
+    <h3><a name="cellCounting"><a href="benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a> Counts</a></h3>
+
+    <p>In this case, the ground truth consists of the number of
+      cells (or other objects) in each image, as counted by one or
+      more humans.  For each image, the cell count produced by an
+      algorithm is compared to the ground truth.  If there is
+      more than one human counter, the mean of their counts is
+      used as ground truth.</p>
+
+    <p>The absolute value of the difference between the two is
+      divided by the ground truth to obtain the amount of error
+      (in percent) of the algorithm on that image.  The mean error
+      (over all images) is reported.  Sometimes the standard
+      deviation of the error is also reported and compared to the
+      standard deviation of the human counters.</p>
+
+
+    <h3><a name="foregroundBackground"><a href="benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a> Foreground and background</a></h3>
+
+    <p>In this case, a human produces a binary (black and white)
+      image the same size as the original image.  Pixels that
+      belong to the foreground (i.e., the cells or other objects)
+      are white, and pixels that belong to the background are
+      black.</p>
+
+    <p>The <a href="http://en.wikipedia.org/wiki/Precision_and_recall">precision
+	and recall</a> are reported, and algorithms are ranked by
+	F-factor (i.e., the harmonic mean of precision and recall).
+	The CellProfiler module <i>CalculateImageOverlap</i> can be
+	used to make these calculations.  The module takes two binary
+	images as input: the segmentation result to be assessed and
+	the ground truth.</p>
+
+    <h3><a name="humanLabel"><a href="benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a> Outlines of of individual
+    objects</a></h3>
+
+    <p>In this case, a human outlines each cell in the image in
+      order to indicate which pixels belong to which cell.  The
+      ground truth is provided as binary images, with black
+      outlines on a white background.</p>
+
+    <p>To compare an algorithm's results to the manual outlines,
+      consider each pixel that is on the boundary found by the
+      algorithm and that is not adjacent to any background pixels.
+      For each such pixel, compute the Euclidean distance to the
+      corresponding pixel on the manually found outline.  Report the
+      percentage of relevant pixels that are within two pixels of the
+      corresponding pixel on the ground-truth outline.</p>
+
+    <p>The benchmarking pipeline &quot;Edges Between
+      Objects&quot; on the
+      CellProfiler <a href="http://www.cellprofiler.org/examples.html">Examples</a>
+      page can be used to make these calculations.</p>
+
+
+    <h3><a name="bioLabel"><a href="benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a> Biological labels</a></h3>
+
+    <p>In these cases, the experiments have been prepared with
+      control samples for which we know the expected biological
+      result.  The types of controls that are available dictate
+      the type of statistic that can be calculated. The following
+      two statistics are widely used:</p>
+
+    <dl>
+      <dt>Z'-factor:</dt>
+      <dd>The Z'-factor indicates how well the algorithm is able
+	to separate the positive and negative controls, given the
+	variation present in both control populations. This factor
+	can be calculated whenever multiple positive and negative
+	control samples are available.  See <a href="http://dx.doi.org/10.1177/108705719900400206">Zhang et al., <i>J. Biomol. Screen</i>, 1999</a> <a href="linked_files/Zhang_JBiomolScr_1999.pdf">[pdf]</a>.</dd>
+      <dt>V-factor:</dt>
+      <dd>The V-factor analyzes all the data along a
+	dose-response curve rather than just the positive and
+	negative controls alone, and is in many ways more
+	appropriate for image-based assays. In a dose-response
+	collection of images, each sample is treated with a
+	different dose, and the resulting response of the biological
+	system should be detectable, usually producing a
+	sigmoid-curve response to dose. Reference: Ravkin I,
+	"Quality measures for imaging-based cellular
+	assays," <i>Society Biomol. Screen. Conference Posters</i>,
+	2004. See
+	also <a href="http://www.ravkin.net/SBS/Literature.htm">http://www.ravkin.net/SBS/Literature.htm</a></dd>
+    </dl>
+
+    <p>For both the Z'-factor and the V-factor, the highest
+      possible value (best assay quality) is 1.  Negative values
+      indicate that distinguishing between positive and negative
+      controls is difficult or impossible. A Z'-factor &gt; 0 is
+      potentially suitable for a high-throughput screen; a
+      Z'-factor &gt; 0.5 is considered an excellent assay.</p>
+
+    <p>The <a href="http://www.cellprofiler.org">CellProfiler</a>
+      software package can calculate Z'-factors and V-factors. See
+      the
+      pipeline <a href="http://www.cellprofiler.org/examples.html">&quot;Human
+	cytoplasm-nucleus translocation assay (SBS)&quot;</a> for
+      how to make these calculations on images that are processed
+      in CellProfiler using the CalculateStatistics module or data
+      tool.  </p>
+
+	<p>CellProfiler's CalculateStatistics data tool can also make
+      these calculations on data produced outside
+      CellProfiler.  To do this, <a href="http://www.cellprofiler.org/download.html">download</a>,
+	 install, and launch CellProfiler, then add LoadText,
+	CalculateStatistics, and ExportToExcel (choosing to export 'Experiment') modules.
+	Load <a href="Sample_Calculate_Statistics_pipeline.mat">this CellProfiler pipeline</a>
+	into CellProfiler to get started.  There is a short demo on constructing a small pipeline in CellProfiler 
+	on the <a href="http://www.cellprofiler.org/examples.html">examples page</a>.
+	Format your data in a text file as instructed in the Help
+	for the LoadText module.  Set the DefaultOutputFolder to your preferred output location
+	and click "Analyze images".  The calculated statistics (Z' factor, V factor,
+	and EC50) will be written to Excel-compatible files.
+	</p>
+
+	</div>
+
+      </div>
+	<footer class="footer">
+	
+        <p>This page last updated 2018-01-31</p>
+        
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	      ga('create', 'UA-44869085-1', 'broadinstitute.org');
+	        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

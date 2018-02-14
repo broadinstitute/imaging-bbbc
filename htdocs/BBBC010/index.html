@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>BBBC010: C. elegans live/dead assay</title>
+    <link href="../bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="../bbbc_stylesheet.css" type="text/css" rel="stylesheet"/>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="page-header">
+	<div class="pull-right">
+	  <a href="http://www.broadinstitute.org/imaging/"><img alt="Broad Institute" src="../linked_files/broad-logo.gif" width="200" height="50"></a>
+	</div>
+
+	<h1>Broad Bioimage Benchmark Collection</h1>
+	<p class="lead">Annotated biological image sets for testing and validation</p>
+      </header>
+      
+      <div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+	  
+	  <li><a href="../index.html">Introduction</a></li>
+	  
+	  <li class="active"><a href="../image_sets.html">Image sets</a></li>
+	  
+	  <li><a href="../benchmarking.html">Benchmarking</a></li>
+	  
+	  <li><a href="../contribute.html">Contribute</a></li>
+	  
+	  <li class="divider"></li>
+	  <li class="nav-header">Legend: Kinds of ground truth</li>
+	  <li class="legend">
+	    <dl class="dl-horizontal">
+	      <dt><a href="../benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a></dt>
+	      <dd>Counts</dd>
+	      <dt><a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></dt>
+	      <dd>Foreground/background</dd>
+	      <dt><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></dt>
+	      <dd>Outlines of objects</dd>
+	      <dt><a href="../benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></dt>
+	      <dd>Biological labels</dd>
+	    </dl>
+	  </li>
+	</ul>
+
+	<div class="tab-content">	
+	  
+	  <h2><i>C. elegans</i> live/dead assay</h2>
+	  
+	  
+<p class="small">Accession number <a href="">BBBC010</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="livedead_pos.png" width="159" height="153" alt="Positive: mostly alive">
+      <div class="caption">
+	Positive: mostly alive
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="livedead_neg.png" width="159" height="153" alt="Negative: mostly dead">
+      <div class="caption">
+	Negative: mostly dead
+      </div>
+    </div>
+  </li>
+</ul>
+    
+    <h3>Biological application</h3>
+    <p>This selection of images are controls selected from a screen
+      to find novel anti-infectives using the roundworm <i> C.elegans </i>. 
+      The animals were exposed to the pathogen <i> Enterococcus faecalis</i> 
+      and either untreated or treated with ampicillin, a known antibiotic against  
+      the pathogen.  The untreated (negative control) worms
+      display predominantly the "dead" pheotype: worms appear rod-like in shape
+      and slightly uneven in texture.  The treated (ampicillin, positive
+      control) worms display predominantly the "live" phenotype:
+      worms appear curved in shape and smooth in texture.</p>
+    
+<p>For more information, please see <a href="http://dx.doi.org/10.1021/cb900084v">Moy et al. (<i>ACS Chem Biol</i>, 2009)</a>.
+
+    <h3>Images</h3>
+    <p>One image per channel (Channel 1 = brightfield; channel 2 = GFP)
+      was acquired at MGH on a Discovery-1 automated microscope (Molecular Devices).
+      Original image size is 696 x 520 pixels.  Images are available in 
+      16-bit TIF.</p>
+
+    <p><a href="BBBC010_v1_images.zip"><i class="icon-download-alt"></i> BBBC010_v1_images.zip (64 MB)</a></p>
+    
+    <h3>Ground truth <a href="../benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a> <a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a> <a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></h3>
+
+    <table class="table">
+      <tbody>
+      <tr>
+	<td><a href="../benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a></td>
+	<td>
+    <p>The 384 images are from a plate of positive and
+	negative controls.  The images are named using this format:
+	&lt;plate&gt;_&lt;wellrow&gt;_&lt;wellcolumn&gt;_&lt;wavelength&gt;_&lt;fileid&gt;.tif
+
+      Columns 1-12 are positive controls treated with ampicillin.  Columns 13-24 are untreated negative controls.  </p>
+
+	</td>
+      </tr>
+      <tr>
+	<td><a href="../benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a></td>
+	<td><p>We also provide human-corrected binary images of
+    foreground/background segmentation:</p>
+
+    <p><a href="BBBC010_v1_foreground.zip"><i class="icon-download-alt"></i> BBBC010_v1_foreground.zip (1.1 MB)</a></p>
+	</td>
+      </tr>
+      <tr>
+	<td><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a></td>
+	<td><p>To address the problem of correctly segmenting individual
+    worms also when they overlap or cluster, we provide one binary
+    foreground/background segmentation ground truth image for each
+    worm:</p>
+
+    <p><a href="BBBC010_v1_foreground_eachworm.zip"><i class="icon-download-alt"></i> BBBC010_v1_foreground_eachworm.zip (2.7 MB)</a></p>
+	</td>
+      </tr>
+    </tbody>
+    </table>
+
+    <h3>For more information </h3>
+    <p>These images were originally acquired for a screen in Fred Ausubel's lab at MGH.
+      Please contact aconery AT molbio.mgh.harvard.edu  for more information.</p>
+
+    <h3>Published results using this image set</h3>
+
+    <table class="table">
+      <thead>
+	<tr>
+	  <th><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a> With automatically identified foreground</th>
+	  <th><a href="../benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a> With manually corrected foregrund</th>
+	  <th>Citation</th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <td>81%</td>
+	  <td>94%</td>
+	  <td><a href="http://dx.doi.org/10.1038/nmeth.1984">Wählby et al., <i>Nat Meth</i>, 2012</a>
+      </tbody>
+    </table>
+
+
+    <h3>Recommended citation</h3>
+    <p>&quot;We used the <i>C.elegans</i> infection live/dead image
+    set version 1 provided by Fred Ausubel and available from the
+    Broad Bioimage Benchmark Collection
+    [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>].&quot;</p>
+
+
+	</div>
+
+      </div>
+	<footer class="footer">
+	
+        <p>This page last updated 2018-01-31</p>
+        
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	      ga('create', 'UA-44869085-1', 'broadinstitute.org');
+	        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<p class="small">Accession number <a href="">BBBC028</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="DIC.png" alt="DIC" height="195" width="261">
+      <div class="caption">
+	DIC image
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="Ground.png" alt="Ground Truth" height="195" width="261">
+      <div class="caption">
+  Ground truth
+  </div>
+</div>
+</li>
+</ul>
+
+
+<h3>Images</h3>
+<p>This dataset includes 60 Differential Interference Contrast (DIC) images of 6 different shapes,
+  such as triangle, circle and multi-height objects. The shapes were made by two-photon polymerization
+   technique. The images are taken on an Olympus Cell-R microscope with a 20x lens.</p>
+<p><a href="images.zip">images.zip</a></p>
+
+<h3>Ground Truth {{FB}}</h3></h3>
+<p>The objects are created from SU-8 photoresist with rhodamine 6G, thus they are visible
+under fluorescent microscopes with the appropriate excitation light and filter. We include
+fluorescent images of the structures after switching from DIC mode and without moving the
+stage. The fluorescent images can be used for quality control measurements of DIC
+reconstruction algorithms. The suggested metric for the measurement is the Mean
+Squared Error (MSE) between the corresponding reconstructed and fluorescent images.</p>
+
+<p><a href="ground_truth.zip">ground_truth.zip</a></p>
+
+<h3>Published results using this image set</h3>
+<p>The proposed data set will be evaluated in a publication to be submitted.</p>
+
+
+<h3>Recommended citation</h3>
+<p>"We used image set {{acc}}v1 [Koos, K., Molnár, J., Kelemen, L., Tamás, G., & Horvath, P. (2016). DIC image reconstruction using an energy minimization framework to visualize optical path length distribution. <i>Scientific reports, 6.</i>] from the Broad Bioimage Benchmark Collection."</p>
+
+<h3>Copyright</h3>
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">
+  The {{acc}}v1 image set
+</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> by <a href="mailto:horvath.peter@brc.mta.hu">Peter Horvath</a> and <a href="mailto:koos.krisztian@brc.mta.hu">Krisztián Koós</a>.
+
+
+  <footer class="footer">
+
+        <p>This page last updated 2017-02-06</p>
+
+	</footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[rel=tooltip]').tooltip();
+      });
+    </script>
+
+{% endblock %}

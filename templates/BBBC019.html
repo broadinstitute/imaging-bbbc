@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 2</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="example1a.png" alt="DIC" width="260" height="204">
+      <div class="caption">
+	DIC image
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="example1b_inverted.png" alt="Ground Truth" width="280" height="210">
+      <div class="caption">
+	Ground truth {{FB}}
+      </div>
+    </div>
+  </li>
+</ul>
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="example2a.png" alt="DIC" width="260" height="204">
+      <div class="caption">
+	DIC image
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="example2b_inverted.png" alt="Ground Truth" width="280" height="210">
+      <div class="caption">
+	Ground truth {{FB}}
+      </div>
+    </div>
+  </li>
+</ul>
+
+<h3>Biological application</h3>
+
+<p>
+  The wound-healing assay is considered the gold standard for studying
+  cell motility and migration. The assay is performed by time-lapse
+  imaging (usually
+  by <a href="http://en.wikipedia.org/wiki/Phase_contrast_microscopy">phase
+  contrast</a>,
+  or <a href="http://en.wikipedia.org/wiki/Differential_interference_contrast_microscopy">differential
+  interference contrast (DIC)</a> microscopy) of the closure of a
+  wound formed by scratching a confluent cell culture. The rate of
+  change in the wound's area is recorded and can be compared with
+  other cells and treatments. Marking the region of interest for each
+  image is the basic task required. The high variability in imaging
+  conditions and cellular appearance requires robust algorithms that
+  can deal with this diversity automatically and accurately—and
+  preferably without the need for parameter tuning. The general
+  problem of segmenting cell clusters in bright-field images is also
+  important for other applications, such as quantifying scatter, thus
+  emphasizing the importance of segmenting images of non-confluent cells.
+</p>
+
+<h3>Images</h3>
+
+<p>
+171 images were partitioned to the eight data sets detailed
+below.
+
+<dl class="dl-horizontal">
+  <dt>TScratch</dt>
+    <dd>
+   24 images available at
+   the <a href="http://www.cse-lab.ethz.ch/index.php?&amp;option=com_content&amp;view=article&amp;id=363">TScratch</a>
+   (software for wound healing segmentation) website (without details of
+   the source), were acquired using a Zeiss Axiovert 200 M microscope equipped
+   with a Zeiss AxioCam MRm camera with maximum contrast (Carl Zeiss AG,
+   Feldbach, Switzerland).
+   <p><a href="../BBBC019/TScratch.zip"><i class="icon-download-alt"></i> TScratch.zip (7MB)</a></p>
+    </dd>
+
+  <dt>Melanoma</dt>
+  <dd> 20 images of cell populations of brain metastatic melanoma during
+	a would healing experiment were acquired in the I. Witz lab using an
+	inverted microscope (Eclipse TE 2000-S; Nikon, Enfield Enfield, CT,
+	USA) fitted with a digital camera (DXM1200F; Nikon).
+<p><a href="../BBBC019/Melanoma.zip"><i class="icon-download-alt"></i> Melanoma.zip (32.6MB)</a></p>
+</dd>
+
+  <dt>Init</dt>
+  <dd> 28 DIC images (pixel size 0.625×0.625 µm) of confluent DA3 cells were
+    acquired using LSM-410 microscope (Zeiss, Germany) in non-confocal
+    mode from 2 single-well experiments in Ilan Tsarfay's laboratory
+    at Tel Aviv University.
+<p><a href="../BBBC019/Init.zip"><i class="icon-download-alt"></i> Init.zip (35.6MB)</a></p>
+</dd>
+
+  <dt>SN15</dt>
+  <dd>54 DIC images (pixel size 1.24×1.24 µm) of confluent DA3 cells
+	were acquired using LSM-510 microscope (Zeiss, Germany) in
+	non-confocal mode, from 27 different wells in a wound healing
+	multi-well experiment performed in Ilan Tsarfay's laboratory at
+    Tel Aviv University.
+<p><a href="../BBBC019/SN15.zip"><i class="icon-download-alt"></i> SN15.zip (1.5MB)</a></p>
+</dd>
+
+  <dt>Scatter</dt>
+  <dd>6 DIC images of MDCK cells were acquired using LSM-410 microscope
+	(Zeiss, Germany) in non-confocal mode from a 96-well plate scatter
+	experiment performed in Ilan Tsarfay's laboratory at Tel Aviv
+	University.
+<p><a href="../BBBC019/Scatter.zip"><i class="icon-download-alt"></i> Scatter.zip (50.9MB)</a></p>
+</dd>
+
+  <dt>Microfluidics</dt>
+  <dd>13 DIC images (pixel size 0.5 x 0.5 µm) of MDCK cells grown
+	in a Cellasic Onix M04S microfluidic plate, acquired using Leica
+	STED microscope in non-confocal mode from a scatter assay with
+	HGF/SF gradient experiment performed in Ilan Tsarfay's laboratory
+	at Tel Aviv University.
+<p><a href="../BBBC019/Microfluidic.zip"><i class="icon-download-alt"></i> Microfluidic.zip (10.7MB)</a></p>
+</dd>
+
+
+  <dt>HEK293</dt>
+  <dd>12 DIC images (pixel size 2.5 x 2.5 µm) of confluent HEK293T
+	cells were acquired using LSM-410 microscope (Zeiss, Germany)
+	in non-confocal mode from a multi-well wound healing experiment
+	in Ilan Tsarfay's laboratory at Tel Aviv University.
+<p><a href="../BBBC019/HEK293.zip"><i class="icon-download-alt"></i> HEK293.zip (3.2MB)</a></p>
+</dd>
+
+  <dt>MDCK</dt>
+  <dd>14 DIC images (pixel size either 0.88 x 0.88 or 1.24 x 1.24 µm)
+	of confluent MDCK/YFP-membrane cells in a wound healing 24-well
+	plate experiment performed in Ilan Tsarfay's laboratory at Tel
+	Aviv University. Images were acquired with an LSM-510 microscope
+	(Zeiss, Germany) in non-confocal mode.
+<p><a href="../BBBC019/MDCK.zip"><i class="icon-download-alt"></i> MDCK.zip (13.9MB)</a></p>
+</dd>
+
+</dl>
+
+
+<h3>Ground truth {{FB}}</h3>
+
+<p>To collect ground truth, each image was manually segmented to
+  enable comparisons between accuracies of different
+  segmentations. There ground truth is stored as one binary bitmap
+  image in PNG format per input image, named identically except for
+  the ".png" at the end of the filename. White (1) denotes
+  foreground.</p>
+
+<h3>Published results using this image set</h3>
+
+<p>
+  The accuracy reported in the chart below is defined as follows:
+<ul>
+	<li>Mean Precision of images in the dataset</li>
+	<li><strong>(</strong>Mean Recall of images in the dataset<strong>)</strong></li>
+</ul>
+</p>
+
+<table class="table small">
+  <thead>
+    <tr>
+      <th rowspan="2">Algorithm</th>
+      <th colspan="8">Image set</th>
+      <th rowspan="2">Citation for results</th>
+    </tr>
+    <tr>
+      <th>Init<br>(N=28)</th>
+      <th>SN15<br>(N=54)</th>
+      <th>Melanoma<br>(N=20)</th>
+      <th>TScratch<br>(N=24)</th>
+	  <th>Scatter<br>(N=6)</th>
+	  <th>Microfluidics<br>(N=13)</th>
+	  <th>HEK293<br>(N=12)</th>
+	  <th>MDCK<br>(N=14)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TScratch
+	<a href="http://www.biotechniques.com/BiotechniquesJournal/2009/April/TScratch-a-novel-and-simple-software-tool-for-automated-analysis-of-monolayer-wound-healing-assays/biotechniques-133324.html">[Gebäck et al., Biotechniques, 2009]</a></td>
+      <td>0.94<br>(0.99)</td>
+      <td>0.94<br>(0.98)</td>
+      <td>0.89<br>(0.89)</td>
+      <td>0.90<br>(0.98)</td>
+	  <td>0.38<br>(0.86)</td>
+	  <td>0.35<br>(0.79)</td>
+	  <td>0.84<br>(0.97)</td>
+	  <td>0.90<br>(0.95)</td>
+	  <td><a href="http://www.biomedcentral.com/1471-2105/14/319">[Zaritsky, et al. BMC Bioinformatics 2013]</a></td>
+    </tr>
+    <tr>
+      <td>MultiCellSeg
+	<a href="http://dx.doi.org/10.1371/journal.pone.0027593">[Zaritsky et al. PLoS ONE, 2011]</a></td>
+      <td>0.98<br>(0.98)</td>
+      <td>0.97<br>(0.97)</td>
+      <td>0.81<br>(0.94)</td>
+      <td>0.93<br>(0.94)</td>
+	  <td>0.45<br>(0.79)</td>
+	  <td>0.23<br>(0.98)</td>
+	  <td>0.95<br>(0.95)</td>
+	  <td>0.97<br>(0.96)</td>
+	  <td><a href="http://www.biomedcentral.com/1471-2105/14/319">[Zaritsky, et al. BMC Bioinformatics 2013]</a></td>
+    </tr>
+    <tr>
+      <td>Topman
+	<a href="http://dx.doi.org/10.1016/j.medengphy.2011.07.014">[Topman et al. Med Eng Phys, 2011]</a></td>
+	  <td>0.96<br>(1.00)</td>
+	  <td>0.92<br>(0.99)</td>
+	  <td>0.91<br>(0.94)</td>
+	  <td>0.95<br>(0.67)</td>
+	  <td>0.43<br>(0.98)</td>
+	  <td>0.47<br>(0.99)</td>
+	  <td>0.74<br>(1.00)</td>
+	  <td>0.81<br>(0.99)</td>
+	  <td><a href="http://www.biomedcentral.com/1471-2105/14/319">[Zaritsky, et al. BMC Bioinformatics 2013]</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+F-measure results:
+<ul>
+	<li>Mean <a href="http://en.wikipedia.org/wiki/F1_score">F-measure</a> of images in the dataset</li>
+	<li><strong>(</strong>Median F-measure of images in the dataset<strong>)</strong></li>
+	<li><strong>[</strong>Mean F-Measure after threshold adjusted on training set<strong>]</strong></li>
+</ul>
+</p>
+
+<table class="table small">
+  <thead>
+    <tr>
+      <th rowspan="2">Algorithm</th>
+      <th colspan="8">Image set</th>
+      <th rowspan="2">Citation for results</th>
+    </tr>
+    <tr>
+      <th>Init<br>(N=28)</th>
+      <th>SN15<br>(N=54)</th>
+      <th>Melanoma<br>(N=20)</th>
+      <th>TScratch<br>(N=24)</th>
+      <th>Scatter<br>(N=6)</th>
+      <th>Microfluidics<br>(N=13)</th>
+      <th>HEK293<br>(N=12)</th>
+      <th>MDCK<br>(N=14)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TScratch
+	<a href="http://www.biotechniques.com/BiotechniquesJournal/2009/April/TScratch-a-novel-and-simple-software-tool-for-automated-analysis-of-monolayer-wound-healing-assays/biotechniques-133324.html">[Gebäck et al., Biotechniques, 2009]</a></td>
+      <td>0.96<br>(0.96)</td>
+      <td>0.96<br>(0.97)</td>
+      <td>0.88<br>(0.90)</td>
+      <td>0.94<br>(0.93)</td>
+	  <td>0.47<br>(0.47)</td>
+	  <td>0.42<br>(0.41)</td>
+	  <td>0.90<br>(0.91)</td>
+	  <td>0.92<br>(0.93)</td>
+	  <td><a href="http://www.biomedcentral.com/1471-2105/14/319">[Zaritsky, et al. BMC Bioinformatics 2013]</a></td>
+    </tr>
+    <tr>
+      <td>MultiCellSeg
+	<a href="http://dx.doi.org/10.1371/journal.pone.0027593">[Zaritsky et al. PLoS ONE, 2011]</a></td>
+      <td>0.98<br>(0.98)</td>
+      <td>0.97<br>(0.98)</td>
+      <td>0.85<br>(0.91)</td>
+      <td>0.93<br>(0.95)</td>
+	  <td>0.55<br>(0.56)</td>
+	  <td>0.35<br>(0.45)</td>
+	  <td>0.95<br>(0.95)</td>
+	  <td>0.96<br>(0.98)</td>
+	  <td><a href="http://www.biomedcentral.com/1471-2105/14/319">[Zaritsky, et al. BMC Bioinformatics 2013]</a></td>
+    </tr>
+    <tr>
+      <td>Topman
+	<a href="http://dx.doi.org/10.1016/j.medengphy.2011.07.014">[Topman et al. Med Eng Phys, 2011]</a></td>
+	  <td>0.98<br>(0.98)<br>[0.97]</td>
+	  <td>0.95<br>(0.97)<br>[0.96]</td>
+	  <td>0.93<br>(0.93)<br>[0.93]</td>
+	  <td>0.78<br>(0.76)<br>[0.84]</td>
+	  <td>0.58<br>(0.60)<br>[0.52]</td>
+	  <td>0.63<br>(0.63)<br>[0.61]</td>
+	  <td>0.85<br>(0.87)<br>[0.84]</td>
+	  <td>0.89<br>(0.93)<br>[0.93]</td>
+	  <td><a href="http://www.biomedcentral.com/1471-2105/14/319">[Zaritsky, et al. BMC Bioinformatics 2013]</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Information in the above charts was from:</p>
+<ul><li>Zaritsky, et al.: Benchmark for multi-cellular segmentation of bright field microscopy images. BMC Bioinformatics 2013 14:319. [<a href="http://www.biomedcentral.com/1471-2105/14/319">link</a>]</li></ul>
+<p>Supplementary data and information to Zaritsky, BMC Bioinformatics 2013 may be found here:</p>
+<i class="icon-download-alt"></i><a href="http://www.cs.tau.ac.il/~assafzar/BBBC019v2/BBBC019_rawData.html"> Supplement (tar.gz) (167,252,832 bytes)</a>
+
+<h3>Acknowledgements</h3>
+
+<p>
+<em>Melanoma</em> images were acquired by Sivan Izraeli from Isaac
+P. Witz's laboratory. <em>TScratch</em> images were taken from the TScratch
+website. The rest of the images were acquired by Sari Natan, Doron Kaplan, and Yaniv Goikhman from Ilan Tsarfay's laboratory at Tel Aviv University. Doron Kaplan labeled regions of interest in "MDCK" images. Assaf Zaritsky labeled the regions of interest in all
+other images and ran the algorithms.
+</p>
+
+<h3>Version history</h3>
+<ul>
+<li><strong>2013-10-28 Version 2</strong>: Added four new datasets: Scatter, Microfluidics, HEK293, and MDCK</li>
+</ul>
+
+<h3>Recommended citation</h3>
+<p>"We used image set <a href="">{{acc}}v2</a> from the Broad
+  Bioimage Benchmark Collection
+  [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>]."</p>
+
+<h3>Copyright</h3>
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">
+  The {{acc}}v2 image set
+</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> by Petros Komoutsakos (TScratch), Isaac P. Witz, Ilan Tsarfay, and Assaf Zaritsky.
+
+{% endblock %}
+
+{% block end_of_body %}
+<script type="text/javascript">
+$(document).ready(function () {
+  $('.carousel').carousel();
+});
+</script>
+{% endblock %}

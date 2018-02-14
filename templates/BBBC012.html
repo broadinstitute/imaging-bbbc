@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="pmk1_infection.png" width="159" height="153" alt="Positive: pmk-1(km25)">
+      <div class="caption">
+	Positive: <i>pmk-1(km25)</i>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="WT_infection.png" width="159" height="153" alt="Negative: wild type">
+      <div class="caption">
+	Negative: wild type
+      </div>
+    </div>
+  </li>
+</ul>
+
+    <h3>Biological application</h3>
+    <p>This selection of images show transgenic <i>C. elegans</i> expressing the promoter 
+      of gene <i>clec-60</i> fused to GFP. The <i>clec-60</i> gene is up-regulated during 
+	<i>S. aureus</i>
+	infection [Irazoqui et al. PLoS Path 2010]. GFP expression is constrained to 
+	the posterior intestinal
+	cells of wild type worms (wt, negative control), while the mutant (positive control), 
+	<i>pmk-1(km25)</i> is defective in the
+	p38 MAPK homolog PMK-1 and often has elevated expression
+	of <i>clec-60p:GFP</i> in the anterior intestine close to the
+	pharynx, which is labeled with the red fluorescent mCherry.
+ 	</p>
+    
+    <h3>Images</h3>
+    <p>The images were acquired at MGH on using a Discovery-1 microscope (Molecular Devices), with one image per channel (Channel 1 = brightfield,
+      Channel 2 = GFP, Channel 3 = mCheery).
+      Original image size is 696 x 520  pixels.  Images are available in 
+      16-bit TIF.</p>
+
+    <p><a href="{{acc}}_v1_images.zip"><i class="icon-download-alt"></i> {{acc}}_v1_images.zip (117 MB)</a></p>
+
+    <h3>Ground truth {{B}}</h3>
+    <p>The images provided are 1 replicate (48 images) of each of the two 
+    controls (positive, <i>pmk-1</i>, and negative, wt).  Images of the <i>pmk-1</i> mutant images are 
+    in the folder entitled "pmk_plate2" and wt worms are in the folder 
+    entitled "WT_plate2".</p>
+    
+    <h3>For more information </h3>
+    <p>These images were originally aquired by Javier Irazoqui's lab at MGH. Please contact javier 'at' molbio.mgh.harvard.edu for
+      more information.</p>
+
+
+    <h3>Published results using this image set</h3>
+
+    <table class="table">
+      <thead>
+	<tr>
+	  <th><i>Z</i>'-factor</th>
+	  <th>Citation</th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <td>0.21</td>
+	  <td><a href="http://dx.doi.org/10.1038/nmeth.1984">Wählby et al., <i>Nat Meth</i>, 2012</a>
+      </tbody>
+    </table>
+
+
+    <h3>Recommended citation</h3>
+<p>&quot;We used image set <a href="">{{acc}}v1</a> provided by Javier
+    Irazoqui, available from the Broad Bioimage Benchmark Collection
+[<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>].&quot;</p>
+
+{% endblock %}

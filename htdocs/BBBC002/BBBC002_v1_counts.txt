@@ -1,0 +1,1 @@
+../../high_throughput_images/BBBC002/BBBC002_v1_counts.txt

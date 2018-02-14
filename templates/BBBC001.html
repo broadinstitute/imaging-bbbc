@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 1</p>
+
+<h3>Example image</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="AS_09125_050118150001_A03f00d0thumb.jpg" width="186" height="186" alt="example image"/>
+    </div>
+  </li>
+</ul>
+    
+    <h3>Biological application</h3>
+
+    <p>These images are of human HT29 colon cancer cells, a cell line
+      that has been widely used for the study of many normal and
+      neoplastic processes.  For
+      instance, <a href="http://dx.doi.org/10.1016/j.cell.2006.01.040">Moffat
+      et al. (<i>Cell</i>, 2006)</a> screened a set of about 43,000
+      such images for mitotic regulators.  Their analysis followed the
+      common pattern of identifying and counting cells with a
+      phenotype of interest (in this case, cells that were in
+      mitosis), then normalizing the count by dividing by the total
+      number of cells.  Such experiments depend on accurate cell
+      counts.</p>
+
+
+    <h3>Images</h3>
+
+<p>The image set consists of 6 fields of view
+from <a href="../BBBC017/">Moffat et al.'s RNAi screen</a>.  The cells
+in all six images have been treated with an RNA interference reagent
+(Rock1_1885_k27).  The samples were stained with Hoechst 33342, pH3,
+and phalloidin.  Hoechst 33342 is a DNA stain that labels the nucleus.
+Only the images of the Hoechst 33342 channel are included, as the
+other channels are not useful for counting cells.</p>
+
+<p>The images were acquired at the Whitehead-MIT Bioimaging Center on
+  a Cellomics ArrayScan. The image size is 512 × 512 pixels. The
+  images are provided in the native DIB format and converted to 8-bit
+  TIFF files.</p>
+
+<p>
+  <a href="{{page}}_v1_images_dib.zip"><i class="icon-download-alt"></i> {{page}}_v1_images_dib.zip (1.9 MB)</a>
+</p>
+<p>
+  <a href="{{page}}_v1_images_tif.zip"><i class="icon-download-alt"></i> {{page}}_v1_images_tif.zip (832 kB)</a>
+</p>
+    
+    <h3>Ground truth {{C}}</h3>
+    
+    <p>A tab-delimited text file contains cell counts in each of the 6
+    images, as determined by two different human counters.  To compare
+    an algorithm's results to these, first compute for each image the
+    absolute difference between the algorithm's count and the average
+    of the humans' counts, then divide by the latter to obtain the
+    deviation from ground truth (in percent).  The mean of these
+    values over all 6 images is the final result.</p>
+
+    <p>The two human observers vary by 11% for this image set. </p>
+
+<p><a href="{{page}}_v1_counts.txt"><i class="icon-download-alt"></i> {{page}}_v1_counts.txt (303 b)</a></p>
+
+    <h3>Published results using this image set</h3>
+    <table class="table">
+      <thead>
+	<tr><th>{{C}}</th><th>Citation</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+	<td>6.2%</td>
+	<td><a href="http://genomebiology.com/2006/7/10/R100">Carpenter
+	et al., <i>Genome Biology</i>, 2006</a>.  See Figure 2A, pages
+	6-7.</td>
+      </tr>
+      </tbody>
+    </table>
+    
+    <h3>Recommended citation</h3>
+<p>"We used image set <a href="">{{acc}}v1</a>
+	[<a href="http://genomebiology.com/2006/7/10/R100">Carpenter
+	et al., <i>Genome Biology</i>, 2006</a>] from the Broad
+	Bioimage Benchmark Collection
+	[<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa
+	et al., <i>Nature Methods</i>, 2012</a>]."</p>
+    
+    <h3>Copyright</h3>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
+    The images and ground truth are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a> by <a href="mailto:droot@broadinstitute.org">David Root</a> and <a href="http://www.broadinstitute.org/~anne/">Anne Carpenter</a>.
+
+{% endblock %}
