@@ -46,6 +46,10 @@ IMAGE_SETS = {'BBBC001': 'Human HT29 colon-cancer cells',
               'BBBC029': 'Synthetic DIC Images',
               'BBBC030': 'Chinese Hamster Ovary Cells',
               'BBBC031': 'Simulated 24-well plate with synthetic cells',
+              'BBBC032': 'Mouse embryo blastocyst cells',
+              'BBBC033': 'Mouse trophoblast stem cells',
+              'BBBC034': 'Induced pluripotent human stem cells',
+              'BBBC035': 'Simulated nuclei of HL60 cells stained with Hoescht'
 }
 
 PAGES = [('index', 'Introduction', ''),
@@ -91,7 +95,7 @@ def make_page(page, title=None, gt=None, tab=None, subdir=False, acc=None):
                             mdate=None if mtime is None else mtime.strftime("%Y-%m-%d"),
                             **icons(base)).encode('utf-8'))
     f.close()
-    
+
 for page, short_title, long_title in PAGES:
     make_page(page, long_title)
 
@@ -101,4 +105,3 @@ for page, short_title, long_title in PAGES:
 
 for acc, title in IMAGE_SETS.items():
     make_page(acc, title, acc=acc, tab='image_sets', subdir=True)
-
