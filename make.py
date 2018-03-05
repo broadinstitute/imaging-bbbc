@@ -49,7 +49,7 @@ IMAGE_SETS = {'BBBC001': 'Human HT29 colon-cancer cells',
               'BBBC032': 'Mouse embryo blastocyst cells',
               'BBBC033': 'Mouse trophoblast stem cells',
               'BBBC034': 'Induced pluripotent human stem cells',
-              'BBBC035': 'Simulated nuclei of HL60 cells stained with Hoescht'
+              'BBBC035': 'Simulated HL60 cells (from the Cell Tracking Challenge)'
 }
 
 PAGES = [('index', 'Introduction', ''),
