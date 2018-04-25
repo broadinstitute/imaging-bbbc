@@ -49,7 +49,8 @@ IMAGE_SETS = {'BBBC001': 'Human HT29 colon-cancer cells',
               'BBBC032': 'Mouse embryo blastocyst cells',
               'BBBC033': 'Mouse trophoblast stem cells',
               'BBBC034': 'Induced pluripotent human stem cells',
-              'BBBC035': 'Simulated HL60 cells (from the Cell Tracking Challenge)'
+              'BBBC035': 'Simulated HL60 cells (from the Cell Tracking Challenge)',
+              'BBBC038': 'Kaggle 2018 Data Science Bowl',
 }
 
 PAGES = [('index', 'Introduction', ''),
