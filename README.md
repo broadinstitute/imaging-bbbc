@@ -27,7 +27,11 @@ Freely Downloadable Microscopy Image Sets
 1. Once you've verified the files in the previous step, do `git add .` to stage all the changed / untracked files for a commit.
 1. Run `git commit -m "Added new dataset BBBC<NEW-DATASET>"` 
 1. Run `git push -u origin issues/XX`. Replace `XX` with the issue number.
-1. Create a PR from this branch and have someone review it.
-1. Once accepted, merge the PR
+1. Create a PR from this branch and have someone review it, if necessary.
+1. Once accepted, merge (squash and merge) the PR. Then, delete the (remote) branch. 
+1. `git checkout master`
+1. `git fetch origin`
+1. `git pull origin master`
+1. `git remote prune origin` (can do `git remote prune origin --dry-run` to check first). This will clean up (prune) the origin branch.
+1. `git branch -d issues/XX` to delete the local branch.
 1. Run `./publish.sh` to upload the files to the web server.
-
