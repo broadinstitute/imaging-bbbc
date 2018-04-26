@@ -23,8 +23,9 @@ Freely Downloadable Microscopy Image Sets
 1. Run `./make.py` to create the `index.html` for the dataset page in `htdocs` programmatically
 1. The `index.html` page will get created under `htdocs/BBBC<NEW-DATASET>/`. 
 1. Copy files related to this dataset, such as the images and ground truth csv files, to  `/imaging/web/BBBC/high_throughput_images` (located on `neon` server). Then, in htdocs, for each file, create symbolic link to the file in `/imaging/web/BBBC/high_throughput_images`. E.g. if you want to add a file called `images.zip` to the dataset `BBBC999`, first copy `images.zip` to `/imaging/web/BBBC/high_throughput_images/BBBC999/`, then in your repo, cd to `htdocs/BBBC999/` and create a softlink to that file by running `ln -s /imaging/web/BBBC/high_throughput_images/BBBC999/images.zip .`. 
-1. Run `git status` to see what files have changed or have been added. Check to make sure that you want to add all the new or changed files that show up. Delete any untracked files that you don't want to commit. 
-1. Once you've verified the files in the previous step, do `git add .` to stage all the changed / untracked files for a commit.
+1. Run `git status` to see what files have changed or have been added. Check to make sure that you want to add all the new or changed files that show up. 
+1. Once you've verified the files in the previous step, do `git add .` (Or, if you do not want to add all, add them individually using `git add <file>` to stage all the changed / untracked files for a commit. 
+1. Delete any untracked files that you don't want to commit by `git checkout -- .` to remove the remaining unstaged files. (This often occurs due to the timestamp feature that makes it seem as though every file is being changed; you do not need to include those in the next commit, so we discard these changes from the working directory.)
 1. Run `git commit -m "Added new dataset BBBC<NEW-DATASET>"` 
 1. Run `git push -u origin issues/XX`. Replace `XX` with the issue number.
 1. Create a PR from this branch and have someone review it, if necessary.
