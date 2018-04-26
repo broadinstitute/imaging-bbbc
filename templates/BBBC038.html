@@ -34,9 +34,9 @@
 </ul>
 
     <h3>Description of the biological application</h3>
-    <p>This image data set was created exclusively for the Kaggle 2018 Data Science Bowl sponsored by Booz Allen Hamilton with cash prizes. This image set was a testing ground for the application of novel and cutting edge approaches in computer vision and machine learning to the segmentation of the nuclei belonging to cells from a breadth of biological contexts. Over 800 teams participated in the competition and over 2000 entries were submitted for scoring.
+    <p>This image data set was created for the Kaggle 2018 Data Science Bowl sponsored by Booz Allen Hamilton with cash prizes. This image set was a testing ground for the application of novel and cutting edge approaches in computer vision and machine learning to the segmentation of the nuclei belonging to cells from a breadth of biological contexts.
 
-    These images form a diverse collection of biological images collectively containing tens of thousands of nuclei. The variety within the data set reflects the type of images collected by research biologists at universities, bio-techs, and hospitals. The nuclei in the images are derived from a range of organisms including humans, mice, and flies. In addition, nuclei have been treated and imaged in a variety of conditions including fluorescent and histology stains, several magnifications, and varying quality of illumination. Finally, nuclei appear in different contexts and states including cultured mono-layers, tissues, and embryos, and cell division, genotoxic stress, and differentiation. Refer to the metadata file that accompanies the data set for a comprehensive look at what defines each image. </p>
+    These images form a diverse collection of biological images collectively containing tens of thousands of nuclei. The variety within the data set reflects the type of images collected by research biologists at universities, bio-techs, and hospitals. The nuclei in the images are derived from a range of organisms including humans, mice, and flies. In addition, nuclei have been treated and imaged in a variety of conditions including fluorescent and histology stains, several magnifications, and varying quality of illumination. Finally, nuclei appear in different contexts and states including cultured mono-layers, tissues, and embryos, and cell division, genotoxic stress, and differentiation.</p>
 
     <h3>Images</h3>
     <p>For each image in an image set, for example "stage1_train", there are two folders: 1) A folder named "images" that contains the image of the nuclei, and 2) a folder named "masks", which contains masks that map to every nuclei in the corresponding image.</p>
@@ -45,10 +45,10 @@
 
     <h3>Ground truth {{O}}</h3>
     <p>In addition to the images there is an accompanying collection of annotations. The annotations were originally created by the Broad Imaging Platform. The annotations take the form of a collection of masks for each image of nuclei. Each mask is a PNG file that contains the segmentation of exactly one nuclei in a folder with the same name as the image it refers to. Like the masks, the images of nuclei are also PNG.</p>
-    <p>The ground truth and annotations were originally created by the Broad Imaging Platform using a combination of GIMP and a web-based annotation tool created internally.</p>
+    <p>The ground truth and annotations were originally created by the Broad Imaging Platform using a combination of GIMP and a web-based annotation tool created internally. <a href="https://www.kaggle.com/c/data-science-bowl-2018/discussion/54900">[annotation strategy]</a> <a href="https://www.kaggle.com/c/data-science-bowl-2018/discussion/48347">[GIMP strategy]</a></p>
 
     <h3>For more information</h3>
-    <p>These images were curated from a variety of sources by the Imaging Platform at the Broad Institute for the 2018 Data Science Bowl. Please contact the <a href="mailto:imagingadmin@broadinstitute.org">Imaging Platform</a> and/or <a href="mailto:anne@broadinstitute.org">Anne Carpenter</a> (Director of the Imaging Platform) for more information.</p>
+    <p>These images were curated from a variety of sources by the Imaging Platform at the Broad Institute for the 2018 Data Science Bowl. Please contact the <a href="mailto:imagingadmin@broadinstitute.org">Imaging Platform</a>.</p>
 
 
     <h3>Published results using this image set</h3>
@@ -58,7 +58,7 @@
   [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>].&quot;</p>
 
     <h3>Copyright</h3>
-    <p><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;"></a> To the extent possible under law, the various contributors of the imagesets have waived all copyright and related or neighboring rights to <span property="dct:title">{{acc}}v1</span>.</p>
+    <p><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;"></a> Copyright: CC0. To the extent possible under law, the various contributors of the imagesets have waived all copyright and related or neighboring rights to <span property="dct:title">{{acc}}v1</span>.</p>
 
 
 {% endblock %}
