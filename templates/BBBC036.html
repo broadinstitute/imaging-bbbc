@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+    <li>
+      <div class="thumbnail">
+        <img src="BBBC036_AGP.png" width="" height="186" alt="example image"/>
+      </div>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <img src="BBBC036_DNA.png" width="" height="186" alt="example image"/>
+      </div>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <img src="BBBC036_ER.png" width="" height="186" alt="example image"/>
+      </div>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <img src="BBBC036_Mito.png" width="" height="186" alt="example image"/>
+      </div>
+    </li>
+    <li>
+      <div class="thumbnail">
+        <img src="BBBC036_RNA.png" width="" height="186" alt="example image"/>
+      </div>
+    </li>
+</ul>
+
+    <h3>Description of the biological application</h3>
+    <p>Phenotypic profiling attempts to summarize multiparametric, feature-based analysis of cellular phenotypes of each sample so that similarities between profiles reflect similarities between samples. This image set provides a basis for testing image-based profiling methods wrt. to their ability to distinguish the effects of small molecules, which are annotated by their Mechanism of Action (MoA).</p>
+
+    <h3>Images</h3>
+    <p>Images are captured by ImageXpress Micro XLS automated microscope, with 5 fluorescent channels at x20 magnification, in 6 fields of view per well. Each image channel was then stored as a separate, grayscale image file in 16-bit TIF format.</p>
+
+<p><a href="https://idr.openmicroscopy.org/webclient/?show=screen-1751"><i class="icon-download-alt"></i> BBBC036 dataset </a></p>
+
+    <h3>Ground truth {{B}}</h3>
+
+    <p>1553 compounds in the dataset are annotated with their known MoA(s), which are obtained from the repurposing hub (<a href="https://clue.io/repurposing-app">https://clue.io/repurposing-app</a>) (Corsello et al. 2017).</p>
+
+    <p><a href="BBBC036_v1_DatasetGroundTruth.zip"><i class="icon-download-alt"></i> BBBC036_v1_DatasetGroundTruth.zip (130 KB)</a></p>
+
+    <h3>Metadata</h3>
+    <p>Description of columns: </p>
+    <p>
+        Descriptions of Metadata columns:
+        Metadata_broad_sample: Internal Broad ID of the compound
+        Metadata_pert_iname: Compound name
+        Metadata_pert_iname2: Alternative compound name
+        Metadata_moa: Mechanism of Actions
+        Metadata_target: Known protein targets of the compound.
+    </p>
+    <p>We used the  Repurposing hub [<a href="https://clue.io/repurposing-app">https://clue.io/repurposing-app</a>], to annotate compounds with their mechanism-of-action (accessed on Feb. 28th 2018). For missing annotations,  we used other resources such as <a href="https://www.drugbank.ca">https://www.drugbank.ca</a>. [1] Corsello, S. M. et al. The Drug Repurposing Hub: a next-generation drug library and information resource. Nat. Med. 23, 405–408 (2017). </p>
+
+    <h3>For more information</h3>
+    <p>These images were contributed by Mark Bray. More information about this dataset can be found in the publication below (<a href="https://doi.org/10.1093/gigascience/giw014">Bray, 2017</a>).</p>
+
+
+    <h3>Published results using this image set</h3>
+    <p>Bray, Mark-Anthony, Sigrun M. Gustafsdottir, Mohammad H. Rohban, Shantanu Singh, Vebjorn Ljosa, Katherine L. Sokolnicki, Joshua A. Bittker, et al. (2017). A Dataset of Images and Morphological Profiles of 30 000 Small-Molecule Treatments Using the Cell Painting Assay. GigaScience 6 (12): 1–5. <a href="https://doi.org/10.1093/gigascience/giw014">10.1093/gigascience/giw014</a> PMID: 28327978 PMCID: PMC5721342</p>
+    <h3>Recommended citation</h3>
+<p>&quot;We used image set <a href="">{{acc}}v1</a> Bray et al. 2018, available from the Broad Bioimage Benchmark Collection
+  [<a href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., <i>Nature Methods</i>, 2012</a>].&quot;</p>
+
+    <h3>Copyright</h3>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
+    </a> These images are licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>
+    by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"><a href="mailto:braymp@gmail.com">Mark Bray</a></span>. </p>
+
+  <footer class="footer">
+        <p>This page last updated 2018-05-03</p>
+  </footer>
+{% endblock %}

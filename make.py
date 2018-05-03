@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- Encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import jinja2
 import datetime
@@ -50,6 +51,8 @@ IMAGE_SETS = {'BBBC001': 'Human HT29 colon-cancer cells',
               'BBBC033': 'Mouse trophoblast stem cells',
               'BBBC034': 'Induced pluripotent human stem cells',
               'BBBC035': 'Simulated HL60 cells (from the Cell Tracking Challenge)',
+              'BBBC036': u'Human U2OS Cells – profiling bioactive compounds using Cell Painting',
+              'BBBC037': u'Human U2OS cells - Gene overexpression profiling experiment',
               'BBBC038': 'Kaggle 2018 Data Science Bowl',
 }
 
@@ -68,8 +71,10 @@ def proper_path(relative):
 
 def make_page(page, title=None, gt=None, tab=None, subdir=False, acc=None):
     input_filename = proper_path('templates/' + page + '.html')
+
     mtime = datetime.datetime.fromtimestamp(stat(input_filename)[8])
-    if page == 'image_sets':
+
+    if ((page == 'image_sets') or (tab == 'image_sets')):
         mtime = None
     if title is None:
         plain_title = None
