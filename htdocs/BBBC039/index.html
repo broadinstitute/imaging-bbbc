@@ -87,7 +87,8 @@
     <p><a href="images.zip"><i class="icon-download-alt"></i> images.zip (77.9 MB)</a></p>
 
     <h3>Ground truth </h3>
-    <p>Ground truth annotations are stored as PNG files encoding masks of independent nuclei: if two nuclei touch, they are labeled with a different color. The images have been split in three subsets: training, validation and test. A metadata package contains files with the names of the images in each of these subsets. We suggest to use the same data partitions for any experiments, making the results comparable in future research.</p>
+    <p>Ground truth annotations are stored as PNG files encoding masks of independent nuclei: if two nuclei touch, they are labeled with a different color. These annotations need to be decoded into labelled matrices to be used as ground truth. Example code for decoding masks can be found in this <a href="https://gist.github.com/jccaicedo/15e811722fca51e3ae90e8b43057f075">gist</a>.</p>
+    <p>The images have been split in three subsets: training, validation and test. A metadata package contains files with the names of the images in each of these subsets. We suggest to use the same data partitions for any experiments, making the results comparable in future research. Example code to run and reproduce evaluation results can be found in the <a href="https://github.com/carpenterlab/unet4nuclei/">UNet4Nuclei</a> repository. This repository has code for preparing the dataset as well as for training U-Nets and evaluating the results.</p>
     <p><a href="masks.zip"><i class="icon-download-alt"></i> masks.zip (2.8 MB)</a></p>
     <p><a href="metadata.zip"><i class="icon-download-alt"></i> metadata.zip (18 KB)</a></p>
 
