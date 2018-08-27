@@ -56,6 +56,7 @@ IMAGE_SETS = {'BBBC001': u'Human HT29 colon-cancer cells',
               'BBBC038': u'Kaggle 2018 Data Science Bowl',
               'BBBC039': u'Nuclei of U2OS cells in a chemical screen',
               'BBBC040': u'Human U2OS cells – Small molecule Cell Painting experiment',
+              'BBBC041': u'P. vivax (malaria) infected human blood smears',
 }
 
 PAGES = [('index', 'Introduction', ''),
