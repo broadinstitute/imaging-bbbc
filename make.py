@@ -15,7 +15,8 @@ def icons(base):
         C='<a href="{0}benchmarking.html#cellCounting" class="badge" rel="tooltip" title="Counts">C</a>'.format(base),
         FB='<a href="{0}benchmarking.html#foregroundBackground" class="badge" rel="tooltip" title="Foreground/background">F</a>'.format(base),
         H='<a href="{0}benchmarking.html#humanLabel" class="badge" rel="tooltip" title="Outlines of objects">O</a>'.format(base),
-        B='<a href="{0}benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a>'.format(base))
+        B='<a href="{0}benchmarking.html#bioLabel" class="badge" rel="tooltip" title="Biological labels">B</a>'.format(base),
+        U='<a href="{0}benchmarking.html#boundingBox" class="badge" rel="tooltip" title="Bounding Boxes">U</a>'.format(base))
 
 IMAGE_SETS = {'BBBC001': u'Human HT29 colon-cancer cells',
               'BBBC002': u'<i>Drosophila</i> Kc167 cells',
