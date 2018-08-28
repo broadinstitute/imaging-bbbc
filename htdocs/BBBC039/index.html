@@ -85,6 +85,7 @@
     <p>This data set has a total of 200 fields of view of nuclei captured with fluorescence microscopy using the Hoechst stain. These images are a sample of the larger BBBC022 chemical screen. The images are stored as TIFF files with 520x696 pixels at 16 bits.</p>
     <p><a href="https://github.com/carpenterlab/unet4nuclei">Github repo</a></p>
     <p><a href="images.zip"><i class="icon-download-alt"></i> images.zip (77.9 MB)</a></p>
+    <p>A small fraction of the images in this dataset overlap with the BBBC038 collection, which is the Data Science Bowl 2018 dataset. Not all images in this dataset were included in the DSB 2018 challenge to avoid a dominant number of fluorescent images for the competition. The BBBC038 collection has more variety of experimental conditions, whereas this dataset comes from a single high-throughput experiment with a large number of perturbations.</p>
 
     <h3>Ground truth </h3>
     <p>Ground truth annotations are stored as PNG files encoding masks of independent nuclei: if two nuclei touch, they are labeled with a different color. These annotations need to be decoded into labelled matrices to be used as ground truth. Example code for decoding masks can be found in this <a href="https://gist.github.com/jccaicedo/15e811722fca51e3ae90e8b43057f075">gist</a>.</p>
