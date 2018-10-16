@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p class="small">Accession number <a href="">{{acc}}</a> &middot; Version 1</p>
+
+<h3>Example images</h3>
+
+<ul class="thumbnails">
+  <li>
+    <div class="thumbnail">
+      <img src="BBBC042_example1.tif" width="" height="250" alt="example image"/>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="BBBC042exampleimage2.png" width="" height="250" alt="example image"/>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="BBBC042exampleimage3.png" width="" height="250" alt="example image"/>
+    </div>
+  </li>
+  <li>
+    <div class="thumbnail">
+      <img src="BBBC042exampleimage4.png" width="" height="250" alt="example image"/>
+    </div>
+  </li>
+</ul>
+
+    <h3>Description of the biological application</h3>
+    <p>The morphology of astrocytes is highly heterogeneous and counting them is currently a laborious task. Development of fully automated counting methods for astrocytes from immunohistological images without any user intervention is one of the major challenges.</p>
+
+    <h3>Images</h3>
+    <p>There are 1200 images. The images were saved from scanned slides. Slides were scanned using the 3DHISTECH Scanner (3DHISTECH Ltd, Budapest, Hungary). The image size is 990 × 708 pixels. Images are available in 8-bit TIF format.</p>
+
+    <h3>Ground truth {{O}}</h3>
+    <p>The images contain GFAP staining in different rat brain regions. These images were used to train Deep convolutional neural network (DCNN). A text file contains coordinates of labeled cells to train DCNN. 15000 cells were labeled.</p>
+    <p><a href="masks.zip"><i class="icon-download-alt"></i> masks.zip (2.8 MB)</a></p>
+    <p><a href="metadata.zip"><i class="icon-download-alt"></i> metadata.zip (18 KB)</a></p>
+
+    <h3>For more information</h3>
+    <p>Please contact <a href="mailto:ilida.suleymanova@helsinki.fi">Ilida Suleymanova</a> regarding this dataset.</p>
+
+    <h3>Published results using this image set</h3>
+    <p>The proposed data set will be evaluated in a publication to be submitted.</p>
+
+    <h3>Recommended citation</h3>
+    <p>&quot;We used image set <a href="">{{acc}}v1</a>, available from the Broad Bioimage Benchmark Collection
+    [<a href="https://doi.org/10.1101/335216">Caicedo et al., <i>bioRxiv</i>, 2018</a>].&quot;</p>
+
+    <h3>Copyright</h3>
+    <p><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;"></a> Copyright: CC0. To the extent possible under law, <a href="mailto:ilida.suleymanova@helsinki.fi">Ilida Suleymanova</a> has waived all copyright and related or neighboring rights to <span property="dct:title">{{acc}}v1</span>.</p>
+
+  <footer class="footer">
+        <p>This page last updated 2018-09-07</p>
+  </footer>
+
+
+{% endblock %}
