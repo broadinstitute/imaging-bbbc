@@ -39,3 +39,8 @@ Freely Downloadable Microscopy Image Sets
 1. `git remote prune origin` (can do `git remote prune origin --dry-run` to check first). This will clean up (prune) the origin branch.
 1. `git branch -d issues/XX` to delete the local branch.
 1. Run `./publish.sh` to upload the files to the web server.
+
+## Versioning
+1. If we update a BBBC entry's data, we need to update the version (going forward as of Oct 18, 2018). To do so, duplicate the template page of the current entry, and use it to create a new BBBC page following instructions above, which will keep the old version's info, and should be clearly marked in red at the top "OUTDATED, please see latest version (here)". 
+1. The main BBBC page should be edited to reflect the next version, and should now include a link to [Version 1]. And, at the bottom of the newer version, we should have a section called "Version History" followed by a line entry that includes the date, the version, and changes from the previous verion (see BBBC019 for example).
+1. On the newer version page, be sure to update the version number in the citation as well.
