@@ -59,6 +59,7 @@ IMAGE_SETS = {'BBBC001': u'Human HT29 colon-cancer cells',
               #BBBC040 is reserved but not ready to be online yet
               'BBBC041': u'P. vivax (malaria) infected human blood smears',
               'BBBC042': u'Rat astrocyte cells',
+              'BBBC043': u'Mouse hippocampal presynaptic terminals (vGlut-1 and vGat)',
 }
 
 PAGES = [('index', 'Introduction', ''),
