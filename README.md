@@ -1,7 +1,7 @@
 # imaging-bbbc
 Freely Downloadable Microscopy Image Sets
 
-## Set up environment to run scripts in this repo
+## Set up environment to run scripts in this repo (done once)
     brew update 
     brew install pyenv pyenv-virtualenv
     pyenv install 2.7.14
@@ -16,6 +16,7 @@ Freely Downloadable Microscopy Image Sets
 
 ## Adding a new dataset
 
+1. Make sure you are up to date with the remote master: `git checkout master` , `git fetch origin` , `git pull origin master`.
 1. Create an issue to add the new dataset (or update existing).
 1. `git checkout -b issues/XX` to checkout a new branch. Replace `XX` with the issue number.
 1. `git push -u origin issues/XX` 
