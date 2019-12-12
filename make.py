@@ -63,6 +63,7 @@ IMAGE_SETS = {'BBBC001': u'Human HT29 colon-cancer cells',
               #BBBC043 is reserved but not ready to be online yet
               'BBBC044': u'Mouse hippocampal presynaptic terminals (vGlut-1 and vGat)',
               'BBBC045': u'Human White Blood Cells',
+              'BBBC046': u'FiloData3D - Single A549 cells with filopodia (synthetic image data)',
 }
 
 PAGES = [('index', 'Introduction', ''),
