@@ -1,3 +1,14 @@
 # Depositing images for OpenScholar BBBC
 
-Copy files related to this dataset, such as the images and ground truth csv files, to /imaging/web/BBBC/high_throughput_images (located on neon server). Then, in htdocs, for each file, create symbolic link to the file in /imaging/web/BBBC/high_throughput_images. E.g. if you want to add a file called images.zip to the dataset BBBC999, first copy images.zip to /imaging/web/BBBC/high_throughput_images/BBBC999/, then in your repo, cd to htdocs/BBBC999/ and create a softlink to that file by running ln -s /imaging/web/BBBC/high_throughput_images/BBBC999/images.zip .. Example images can just be stored directly in the corresponding htdocs directory, but note that tif images do not work (use png, gif, or jpeg)
+Copy files to server
+1. Use Finder to create a directory `/imaging/web/BBBC/high_throughput_images/BBBC999/`
+1. Use Finder to copy data files to that directory
+
+Make files available via HTTP
+
+1. Use Finder to create a directory `/imaging/web/BBBC/htdocs/BBBC999/`
+1. Log in to a Broad server
+1. `cd /imaging/web/BBBC/htdocs/BBBC999`
+1. For each data file, e.g. `images.zip`, do this `ln -s /imaging/web/BBBC/high_throughput_images/BBBC999/images.zip .`
+1. `images.zip` is now available at https://data.broadinstitute.org/bbbc/BBBC999/images.zip
+
