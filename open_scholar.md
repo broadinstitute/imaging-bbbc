@@ -1,0 +1,3 @@
+# Depositing images for OpenScholar BBBC
+
+Copy files related to this dataset, such as the images and ground truth csv files, to /imaging/web/BBBC/high_throughput_images (located on neon server). Then, in htdocs, for each file, create symbolic link to the file in /imaging/web/BBBC/high_throughput_images. E.g. if you want to add a file called images.zip to the dataset BBBC999, first copy images.zip to /imaging/web/BBBC/high_throughput_images/BBBC999/, then in your repo, cd to htdocs/BBBC999/ and create a softlink to that file by running ln -s /imaging/web/BBBC/high_throughput_images/BBBC999/images.zip .. Example images can just be stored directly in the corresponding htdocs directory, but note that tif images do not work (use png, gif, or jpeg)
