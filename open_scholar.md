@@ -9,7 +9,7 @@ Copy files to server. Use Finder to do these steps:
 
 Make files available via HTTP
 
-example.jpg` is already available at https://data.broadinstitute.org/bbbc/BBBC999/example.jpg, but `images.zip` needs more steps
+`example.jpg` is already available at https://data.broadinstitute.org/bbbc/BBBC999/example.jpg, but `images.zip` needs more steps
 
 1. Log in to a Broad server
 1. `cd /imaging/web/BBBC/htdocs/BBBC999`
