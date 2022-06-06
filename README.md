@@ -2,6 +2,9 @@
 
 https://bbbc.broadinstitute.org/
 
+## Website updates
+As of 2020, the BBBC website is managed via the OpenScholar platform rather than Github. Instructions for depositing images on the Broad server are below. Active issues related to previously held BBBC image sets should be completed then closed. No new issues should be created here. 
+
 ## Depositing images for OpenScholar BBBC
 
 Copy files to server. Use Finder to do these steps:
